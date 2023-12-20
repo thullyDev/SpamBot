@@ -1,4 +1,5 @@
 env
+.env
 chromedriver.exe
 geckodriver.exe
 __pycache__/
