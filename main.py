@@ -17,7 +17,7 @@ def nato(driver: str, mode: str, cached: bool=False):
         print(f"No such driver as {driver}")
         return
 
-    if mode not in { "page", "mangas", "chapters"  }:
+    if mode not in { "page", "mangas" }:
         print(f"No such mode as {mode}")
         return
 
@@ -26,7 +26,6 @@ def nato(driver: str, mode: str, cached: bool=False):
     # fb_auth = FacebookAuthenticator(driver)
     # fb_auth.login()
 
-    if mode == "chapters": natospam.chapters(driver)
     if mode == "mangas": natospam.mangas(driver, cached=cached)
     # if mode == "page": natospam.page(driver)
 

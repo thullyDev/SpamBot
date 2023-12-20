@@ -11,11 +11,6 @@ class NatoKakalot(NatoKakalotScraper):
 		driver.get(url)
 		self.comment(driver)
 		
-	def chapters(self, driver, cached=False):
-		url = self.build_url(base=BASE)
-		driver.get(url)
-		self.comment(driver)
-
 	def mangas(self, driver, page=1, pages=1672, cached=False):
 		last_index = 1
 		if cached:
@@ -29,9 +24,8 @@ class NatoKakalot(NatoKakalotScraper):
 			for index in range(last_index, len(mangas)):
 				url = mangas[index]
 				driver.get(url)
-				# self.comment(driver)
+				self.comment(driver)
 				cache.set("nato_last_manga_index", index)
-
 			
 
 	def comment(self, driver):
