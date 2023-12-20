@@ -23,11 +23,11 @@ def nato(driver: str, mode: str, cached: bool=False):
 
 
     driver = chrome_driver() if driver == "chrome" else firefox_driver()
-    # fb_auth = FacebookAuthenticator(driver)
-    # fb_auth.login()
+    fb_auth = FacebookAuthenticator()
+    fb_auth.login(driver)
 
     if mode == "mangas": natospam.mangas(driver, cached=cached)
-    # if mode == "page": natospam.page(driver)
+    if mode == "page": natospam.page(driver)
 
 
 def chrome_driver():
