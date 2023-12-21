@@ -45,3 +45,7 @@ class NatoKakalot(NatoKakalotScraper):
 
         driver.switch_to.default_content()
 
+    # def wait_selector(self, driver, type_selector, selector, TIME_OUT):
+    # 	if type_selector == "class":
+
+
