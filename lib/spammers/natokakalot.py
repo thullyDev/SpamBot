@@ -49,8 +49,8 @@ class NatoKakalot(NatoKakalotScraper):
 
         comment_input.send_keys(SPAM_COMMENT)
         post_btn = WebDriverWait(driver, TIME_OUT).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".UFIImageBlockContent button.rfloat")))
-        # post_btn = driver.find_element(By.CSS_SELECTOR, "")
-        # post_btn.click()
+        post_btn = driver.find_element(By.CSS_SELECTOR, "")
+        post_btn.click()
         time.sleep(2)
 
         driver.switch_to.default_content()
